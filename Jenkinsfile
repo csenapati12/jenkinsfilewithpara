@@ -69,7 +69,7 @@ def masterBranch()
 	/***Create zip package from the source code and push it to artifactory***/
 	stage'Package & Publish'
 	//	package_publish_artifactory_master()
-	}
+	
 
         stage'Deploy Code to Prod'
 	//	package_publish_artifactory_master()
