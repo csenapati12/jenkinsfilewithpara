@@ -70,6 +70,14 @@ def masterBranch()
 	stage'Package & Publish'
 	//	package_publish_artifactory_master()
 	}
+
+        stage'Deploy Code to Prod'
+	//	package_publish_artifactory_master()
+	}
+
+
+
+
 def developBranch() 
 	{
 	
@@ -91,7 +99,9 @@ def developBranch()
 		//publish_html()
 	
 	/***Create zip package from the source code and push it to artifactory***/		  
-    stage'Package & Publish'
+    stage'Packaging & Publish'
+	//	package_publish_artifactory()
+    stage'Depoy to Dev'
 	//	package_publish_artifactory()
    }
    
@@ -120,11 +130,7 @@ def developBranch()
 	/***Publish the coverage report and junit reports***/			
 	stage'Publish Reports'
 	//	publish_junit()
-	//	publish_html()
-	
-	/***Create zip package from the source code and push it to artifactory***/
-	stage'Package & Publish'
-	//	package_publish_artifactory_master()
+	//	publish_html()	
 		
 	}
 
